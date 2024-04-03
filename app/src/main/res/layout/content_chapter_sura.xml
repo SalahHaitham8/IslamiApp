@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_sura">
+    tools:showIn="@layout/activity_sura"
+tools:context=".quran_tab.sura_activity"
+    >
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
@@ -21,7 +23,7 @@
         app:layout_constraintWidth_percent="0.9"
         >
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/chapter_sura_recycler"
+            android:id="@+id/chapter_SuraDetails_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

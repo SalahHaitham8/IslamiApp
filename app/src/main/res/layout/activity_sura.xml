@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".sura_activity"
+    tools:context=".quran_tab.sura_activity"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/background">
     <com.google.android.material.appbar.AppBarLayout
@@ -14,6 +14,7 @@
 
         >
         <androidx.appcompat.widget.Toolbar
+android:id="@+id/toolparr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 

@@ -1,8 +1,7 @@
-package com.example.islami_comeback
+package com.example.islami_comeback.quran_tab
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.get
 import androidx.recyclerview.widget.RecyclerView
 import com.example.islami_comeback.databinding.SuraNameBinding
 
@@ -17,21 +16,22 @@ import com.example.islami_comeback.databinding.SuraNameBinding
 
     override fun onBindViewHolder(holder: viewholder, position: Int) {
 
-        holder.viewbinding.suraname.text=names[position]
-        if (onsuraclick!=null){
-            holder.viewbinding.root.setOnClickListener{
-                onsuraclick?.onclick(names[position],position)
+        holder.viewbinding.suraname.text = names[position]
+        if (onsuraname!= null) {
+            holder.viewbinding.root.setOnClickListener {
+                onsuraname?.onsuraclick(position,names[position])
             }
-        }
 
+        }
     }
 
     override fun getItemCount(): Int =names.size
 
      class viewholder(val viewbinding: SuraNameBinding) : RecyclerView.ViewHolder(viewbinding.root)
-     var onsuraclick:onsuraclicklistner?=null
-     interface onsuraclicklistner{
-         fun onclick(item:String,position:Int)
+
+     var onsuraname: onsuranameclick?=null
+     interface onsuranameclick{
+         fun onsuraclick(position:Int,name:String)
      }
 
 }

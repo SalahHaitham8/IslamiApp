@@ -1,4 +1,4 @@
-package com.example.islami_comeback.taps
+package com.example.islami_comeback.quran_tab
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.islami_comeback.databinding.FragmentQuranFragmentBinding
-import com.example.islami_comeback.sura_activity
-import com.example.islami_comeback.sura_name_adapter
 
 
 class quran_fragment : Fragment() {
@@ -36,32 +34,34 @@ lateinit var viewbinding:   FragmentQuranFragmentBinding
     ): View? {
         viewbinding=FragmentQuranFragmentBinding.inflate(layoutInflater)
         return viewbinding.root
-    }
 
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initrecycler()
+        initviews()
     }
- lateinit var adapter: sura_name_adapter
-    private fun initrecycler() {
-        adapter= sura_name_adapter(names)
-        adapter.onsuraclick=object :sura_name_adapter.onsuraclicklistner{
-            override fun onclick(name: String, position: Int) {
-               startchapaterdetailactivity(name,position)
+
+
+    lateinit var SuraNameAdapter: sura_name_adapter
+    private fun initviews() {
+        SuraNameAdapter= sura_name_adapter(names)
+        viewbinding.recyclerSuraname.adapter=SuraNameAdapter
+
+        SuraNameAdapter.onsuraname=object : sura_name_adapter.onsuranameclick{
+            override fun onsuraclick(position: Int, name: String) {
+                val intent=Intent(context, sura_activity::class.java)
+                intent.putExtra(constants.CONSTANT_NAME,name)
+                intent.putExtra(constants.CONSTANT_INDEX,position+1)
+                startActivity(intent)
 
             }
         }
-        viewbinding.recyclerSuraname.adapter=adapter
 
-    }
-    fun startchapaterdetailactivity(name:String,position:Int){
-        val intent=Intent(context,sura_activity::class.java)
-        intent.putExtra(constants.CONSTANT_NAME,name)
-        intent.putExtra(constants.CONSTANT_INDEX,position+1)
-        startActivity(intent)
+        }
 
 
     }
 
 
-}
+
+

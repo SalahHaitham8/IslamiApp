@@ -6,7 +6,7 @@ import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.example.islami_comeback.databinding.ActivityHomeBinding
 import com.example.islami_comeback.taps.hadeeth_fragment
-import com.example.islami_comeback.taps.quran_fragment
+import com.example.islami_comeback.quran_tab.quran_fragment
 import com.example.islami_comeback.taps.radio_fragment
 import com.example.islami_comeback.taps.sebha_fragment
 import com.google.android.material.navigation.NavigationBarView
