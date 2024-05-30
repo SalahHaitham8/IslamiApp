@@ -21,7 +21,7 @@ class sura_activity : AppCompatActivity() {
     private fun initviews() {
         setSupportActionBar(viewbinding.toolparr)
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         viewbinding.suranameAppbar.text=suraname
         supportActionBar?.title=""
 

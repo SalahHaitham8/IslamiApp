@@ -5,7 +5,6 @@ plugins {
 
 android {
     compileSdk 34
-
     defaultConfig {
         applicationId "com.example.islami_comeback"
         minSdk 24
