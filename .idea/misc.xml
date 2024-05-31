@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/islami_comeback/app/src/main/res/drawable/shape_sebha.xml" value="0.2425" />
         <entry key="..\:/islami_comeback/app/src/main/res/layout/activity_agaay.xml" value="0.3038949275362319" />
         <entry key="..\:/islami_comeback/app/src/main/res/layout/activity_hadeth_details.xml" value="0.36666666666666664" />
         <entry key="..\:/islami_comeback/app/src/main/res/layout/activity_home.xml" value="0.35858585858585856" />
@@ -14,6 +15,7 @@
         <entry key="..\:/islami_comeback/app/src/main/res/layout/fragment_hadeeth_fragment.xml" value="0.36666666666666664" />
         <entry key="..\:/islami_comeback/app/src/main/res/layout/fragment_quran_fragment.xml" value="0.35260416666666666" />
         <entry key="..\:/islami_comeback/app/src/main/res/layout/fragment_radio_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/islami_comeback/app/src/main/res/layout/fragment_sebha_fragment.xml" value="0.36666666666666664" />
         <entry key="..\:/islami_comeback/app/src/main/res/layout/item_hadeth.xml" value="0.365625" />
         <entry key="..\:/islami_comeback/app/src/main/res/layout/sura_name.xml" value="0.365625" />
         <entry key="..\:/islami_comeback/app/src/main/res/layout/vreses_details.xml" value="0.33" />

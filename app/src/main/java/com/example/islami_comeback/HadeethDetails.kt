@@ -3,13 +3,14 @@ package com.example.islami_comeback
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.islami_comeback.databinding.ActivityAgaayBinding
+import com.example.islami_comeback.databinding.ActivityHadeethDetailsBinding
+import com.example.islami_comeback.hadeeth_tab.hadeeth
 
-class agaay : AppCompatActivity() {
-    lateinit var viewbinding:ActivityAgaayBinding
+class HadeethDetails : AppCompatActivity() {
+    lateinit var viewbinding:ActivityHadeethDetailsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewbinding= ActivityAgaayBinding.inflate(layoutInflater)
+        viewbinding= ActivityHadeethDetailsBinding.inflate(layoutInflater)
         setContentView(viewbinding.root)
         initviews()
         initpram()
@@ -32,7 +33,7 @@ class agaay : AppCompatActivity() {
         return true
     }
 
-    var hadeeth:hadeeth?=null
+    var hadeeth: hadeeth?=null
     private fun initpram() {
         if (Build.VERSION.SDK_INT >= 33) {
             hadeeth=  intent.getSerializableExtra(constants.CONSTANT_HADETH,hadeeth!!::class.java)

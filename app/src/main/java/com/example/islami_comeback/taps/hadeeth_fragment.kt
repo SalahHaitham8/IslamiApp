@@ -6,11 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.islami_comeback.agaay
+import com.example.islami_comeback.HadeethDetails
 import com.example.islami_comeback.databinding.FragmentHadeethFragmentBinding
-import com.example.islami_comeback.hadeeth
+import com.example.islami_comeback.hadeeth_tab.hadeeth
 import com.example.islami_comeback.hadeeth_tab.hadeethNameAdapter
-import com.example.islami_comeback.hadeeth_tab.hadeth_details
 
 
 class hadeeth_fragment : Fragment() {
@@ -48,8 +47,8 @@ lateinit var viewbinding:FragmentHadeethFragmentBinding
         viewbinding.hadeethRecycler.adapter=adapter
 
     }
-    private fun starthadethdetail(item:hadeeth) {
-        val intent=Intent(activity,agaay::class.java)
+    private fun starthadethdetail(item: hadeeth) {
+        val intent=Intent(activity, HadeethDetails::class.java)
          intent.putExtra(constants.CONSTANT_HADETH,item)
 
         startActivity(intent)
@@ -72,7 +71,7 @@ lateinit var viewbinding:FragmentHadeethFragmentBinding
             val lines=element.trim().split("\n")
             val title=lines[0]
             val content=lines.joinToString("\n")
-            val hadeth=hadeeth(title,content)
+            val hadeth= hadeeth(title,content)
             hadeethlist.add(hadeth)
         }
 

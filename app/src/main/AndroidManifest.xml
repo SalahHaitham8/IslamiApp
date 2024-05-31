@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Islami_comeback"
         tools:targetApi="31">
         <activity
-            android:name=".agaay"
+            android:name=".HadeethDetails"
             android:exported="false" />
         <activity
             android:name=".hadeth_details"

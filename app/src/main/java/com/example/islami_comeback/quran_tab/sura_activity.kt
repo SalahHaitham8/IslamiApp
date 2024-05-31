@@ -29,6 +29,7 @@ class sura_activity : AppCompatActivity() {
     }
 
     private fun loadfiles() {
+        val x=10
         val filecontent =
         assets.open("$suraposition.txt").bufferedReader().use{ it.readText() }
         val verse = filecontent.trimEnd().split("\n")
