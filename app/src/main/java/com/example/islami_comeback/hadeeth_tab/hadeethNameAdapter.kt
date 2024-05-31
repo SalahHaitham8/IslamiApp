@@ -4,8 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.islami_comeback.databinding.ItemHadethBinding
-import com.example.islami_comeback.databinding.VresesDetailsBinding
-import com.example.islami_comeback.hadeeth
 
 class hadeethNameAdapter(var ahadethlist:MutableList<hadeeth>?) :RecyclerView.Adapter<hadeethNameAdapter.Viewholder>() {
 
@@ -35,6 +33,6 @@ fun bindlist(newlist:MutableList<hadeeth>){
 }
     var onitemclick:onitemclicklistner?=null
 interface onitemclicklistner{
-    fun onitemclick(position: Int,item:hadeeth)
+    fun onitemclick(position: Int,item: hadeeth)
 }
 }

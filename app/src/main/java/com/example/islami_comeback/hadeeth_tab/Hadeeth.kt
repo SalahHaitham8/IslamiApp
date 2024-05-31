@@ -1,4 +1,4 @@
-package com.example.islami_comeback
+package com.example.islami_comeback.hadeeth_tab
 
 import android.icu.text.CaseMap
 import android.os.Parcelable
